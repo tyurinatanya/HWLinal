@@ -109,7 +109,7 @@ public:
         x[2][2]=a8;
     }
     ~Matrix3D(){
-        for(int i = 0; i < n; i++) delete x[i];
+        for(int i = 0; i < n; i++) delete[] x[i];
         delete[]x;
     }
     double getValue(unsigned int i, unsigned j) const{
