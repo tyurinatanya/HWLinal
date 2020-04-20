@@ -8,3 +8,5 @@
 **Matrix3.cpp** - реализация Matrix3.hpp
 
 **Vector3D** - первая сдача задачи (файл перемещён в ветку first_homework)
+
+**CMakeLists.txt** - сценарий сборки cmake-ом
