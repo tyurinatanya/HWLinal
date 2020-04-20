@@ -7,4 +7,4 @@
 
 **Matrix3.cpp** - реализация Matrix.hpp
 
-**Vector3D** - первая сдача задачи
+**Vector3D** - первая сдача задачи (файл перемещён в ветку first_homework)
