@@ -14,18 +14,18 @@ public:
     void setValue(unsigned int i, unsigned int j, double value);
     int getSize()const;
 
-    Matrix3D operator +(const Matrix3D& m1);
-    Matrix3D operator -(const Matrix3D& m1);
-    Matrix3D operator *(int b);
-    Matrix3D operator *(Matrix3D& m1);
-    Vector3D operator *(Vector3D& v);
+    Matrix3D operator +(const Matrix3D& m1) const;
+    Matrix3D operator -(const Matrix3D& m1) const;
+    Matrix3D operator *(const int& b) const;
+    Matrix3D operator *(const Matrix3D& m1) const;
+    Vector3D operator *(const Vector3D& v) const;
 
     double det();
 };
 
 
 Matrix3D operator *(int b, const Matrix3D& m1);
-Vector3D operator* (Vector3D& v, Matrix3D& m);
+Vector3D operator* (const Vector3D& v, const Matrix3D& m);
 
 std::istream& operator>>(std::istream& is, Matrix3D& m);
 std::ostream & operator<<(std::ostream& os, const Matrix3D&  m);
