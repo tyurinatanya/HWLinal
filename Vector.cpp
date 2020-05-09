@@ -25,7 +25,7 @@ void Vector3D::setValue(unsigned int i, double x){
         a[i]=x;
     }
 
-Vector3D Vector3D:: operator+(const Vector3D& v){
+Vector3D Vector3D:: operator+(const Vector3D& v) const{
     Vector3D v2;
     for (unsigned int i=0; i<n; ++i){
         v2.setValue(i, v.getValue(i)+a[i]);
@@ -33,7 +33,7 @@ Vector3D Vector3D:: operator+(const Vector3D& v){
     return v2;
 }
 
-Vector3D Vector3D:: operator-(const Vector3D& v){
+Vector3D Vector3D:: operator-(const Vector3D& v) const{
     Vector3D v2;
     for (unsigned int i=0; i<n; ++i){
         v2.setValue(i, a[i]-v.getValue(i));
@@ -41,14 +41,14 @@ Vector3D Vector3D:: operator-(const Vector3D& v){
     return v2;
 }
 
-unsigned int Vector3D:: operator*(Vector3D& v){
+unsigned int Vector3D:: operator*(const Vector3D& v) const{
     unsigned int rez=0;
     for(unsigned int i=0; i<n;++i){
         rez+=a[i]*v.getValue(i);
     }
     return  rez;
 }
-Vector3D Vector3D:: operator*(int b){
+Vector3D Vector3D:: operator*(const int& b) const{
     Vector3D v;
     for (unsigned int i=0; i<n;++i){
         v.setValue(i, a[i]*b);
