@@ -32,7 +32,7 @@ int Matrix3D:: getSize()const {
     return n;
 }
 
-Matrix3D Matrix3D:: operator +(const Matrix3D& m1){
+Matrix3D Matrix3D:: operator +(const Matrix3D& m1) const{
     Matrix3D m2= Matrix3D();
 
     for (unsigned int i=0; i<n;++i){
@@ -43,7 +43,7 @@ Matrix3D Matrix3D:: operator +(const Matrix3D& m1){
     return m2;
 }
 
-Matrix3D Matrix3D:: operator -(const Matrix3D& m1){
+Matrix3D Matrix3D:: operator -(const Matrix3D& m1) const{
     Matrix3D m2= Matrix3D();
     for (unsigned int i=0; i<n;++i){
 
@@ -54,7 +54,7 @@ Matrix3D Matrix3D:: operator -(const Matrix3D& m1){
     return m2;
 }
 
-Matrix3D Matrix3D:: operator *(int b){
+Matrix3D Matrix3D:: operator *(const int& b) const{
     Matrix3D m2= Matrix3D();
     for (unsigned int i=0; i<n;++i){
 
@@ -65,7 +65,7 @@ Matrix3D Matrix3D:: operator *(int b){
     return m2;
 }
 
-Matrix3D Matrix3D:: operator *(Matrix3D& m1){
+Matrix3D Matrix3D:: operator *(const Matrix3D& m1) const{
 
     Matrix3D m2= Matrix3D();
     double c[3][3];
@@ -92,7 +92,7 @@ Matrix3D Matrix3D:: operator *(Matrix3D& m1){
     return m2;
 }
 
-Vector3D Matrix3D:: operator* (Vector3D& v){
+Vector3D Matrix3D:: operator* (const Vector3D& v) const{
     Vector3D v2=Vector3D();
     double c[3];
 
@@ -132,7 +132,7 @@ Matrix3D operator *(int b, const Matrix3D& m1){
     return m2;
 }
 
-Vector3D operator* (Vector3D& v, Matrix3D& m){
+Vector3D operator* (const Vector3D& v, const Matrix3D& m){
     Vector3D v2=Vector3D();
     double c[3];
 
